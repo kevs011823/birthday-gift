@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+    .hidden-content {
+      display: none;
+    }
+    img {
+      max-width: 300px;
+      margin: 20px 0;
+    }
+    h1 {
+      color: #ff4081;
+    }
+  </style>
+</head>
+<body>
+  <h1>View Your Surprise!</h1>
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="checkPassword()">Submit</button>
+
+  <!-- Hidden content (revealed after password entry) -->
+  <div id="content" class="hidden-content">
+    <h1>Happy 30th Birthday!</h1>
+  <p>Wishing you a day filled with love, joy, and happiness. You deserve the best!</p>
+  <p>When I was thinking about the kiss we shared, it was a moment that said everything my word couldn't.</p>
+  <p>You’ve always been special to me, more than I could express.</p>
+  <p>I LOVE YOU ALWAYS!</p>
+  <audio id="birthday-audio" controls autoplay>
+    <source src="birthday_song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+  <p>お誕生日おめでとう、俺の特別な人</p>
+    <img src="birthday_girl_picture.jpg" alt="Birthday Girl" style="width: 400px; height: auto;" />
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      if (password === '19941004') {
+        document.getElementById('content').style.display = 'block';
+      } else {
+        alert('Incorrect password, try again!');
+      }
+    }
+  </script>
+</body>
+</html>
